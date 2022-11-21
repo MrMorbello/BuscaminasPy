@@ -1,0 +1,4 @@
+El juego completo está manejado por Buscaminas
+
+Van a haber contenedores en el tablero
+cada contenedor se crea para bomba o nada, y después actualizaré los números
