@@ -1,4 +1,4 @@
-from contenedor import Contenedor
+from tablero import Tablero
 from constantes import *
 
 class Juego:
@@ -7,7 +7,7 @@ class Juego:
         self.estado = EN_JUEGO
         self.alto = alto
         self.ancho = ancho
-        self.contenedores = {}
+        self.tablero = Tablero(self)
 
     def perder(self):
         self.estado = PERDIDO
@@ -18,7 +18,10 @@ class Juego:
         # Ganar (?
 
     def click(self, ubicacion):
-        self.contenedores.get(ubicacion).click()
+        self.tablero.click(ubicacion)
 
     def marcar(self, ubicacion):
-        self.contenedores.get(ubicacion).marcar()
+        self.tablero.marcar(ubicacion)
+
+    def dibujar(self):
+        self.tablero.dibujar()
