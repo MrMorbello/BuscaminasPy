@@ -16,6 +16,9 @@ class Contenido:
     def esta_marcado(self):
         return self.marcado
 
+    def dibujo(self):
+        pass
+
 
 class Bomba(Contenido):
 
@@ -26,11 +29,8 @@ class Bomba(Contenido):
     def activar(self):
         self.juego.perder()
     
-    def dibujar(self):
-        if self.esta_marcado():
-            print(MARCA, end=' ')
-        else:
-            print(BOMBA, end=' ')
+    def dibujo(self):
+        return BOMBA
 
 
 class Numero(Contenido):
@@ -42,8 +42,5 @@ class Numero(Contenido):
     def incrementar_numero(self):
         self.numero += 1
     
-    def dibujar(self):
-        if self.esta_marcado():
-            print(MARCA, end=' ')
-        else:
-            print(VACIO if self.numero == 0 else self.numero, end=' ')
+    def dibujo(self):
+        return VACIO if self.numero == 0 else self.numero

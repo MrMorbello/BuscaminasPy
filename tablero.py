@@ -28,7 +28,7 @@ class Tablero():
         iterar_vecinos(self.casilleros, ubicacion)
 
     def click(self, ubicacion):
-        self.casilleros.get(ubicacion).descubrir()
+        self.casilleros.get(ubicacion).click()
 
     def marcar(self, ubicacion):
         self.casilleros.get(ubicacion).marcar()
